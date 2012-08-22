@@ -30,7 +30,7 @@ CREATE  TABLE IF NOT EXISTS `TCS`.`Usuario` (
   `domicilio` VARCHAR(45) NOT NULL ,
   `cuit` INT NOT NULL ,
   `rol` INT NOT NULL ,
-  `activo` INT NOT NULL ,
+  `activo` TINYINT(1)  NOT NULL ,
   PRIMARY KEY (`idUsuario`) )
 ENGINE = InnoDB;
 
@@ -98,7 +98,7 @@ CREATE  TABLE IF NOT EXISTS `TCS`.`Articulo` (
   `marca` INT NOT NULL ,
   `propiedades` LONGTEXT NOT NULL ,
   `precio` DOUBLE NOT NULL ,
-  `activo` INT NOT NULL ,
+  `activo` TINYINT(1)  NOT NULL ,
   PRIMARY KEY (`idArticulo`) )
 ENGINE = InnoDB;
 
