@@ -131,7 +131,7 @@
                prefix="localhost_access_log." suffix=".txt" pattern="common" resolveHosts="false"/>
         -->
 
-      </Host>
+      <Context docBase="Proyecto TCS" path="/Proyecto_TCS" reloadable="true" source="org.eclipse.jst.jee.server:Proyecto TCS"/></Host>
     </Engine>
   </Service>
 </Server>
