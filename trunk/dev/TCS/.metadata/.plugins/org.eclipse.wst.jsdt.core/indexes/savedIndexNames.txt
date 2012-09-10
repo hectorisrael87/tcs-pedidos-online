@@ -1,0 +1,2 @@
+INDEX VERSION 1.122+D:\Fernabel\Facu\TCS\src\dev\TCS\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+4117485654.index

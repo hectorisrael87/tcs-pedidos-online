@@ -1,0 +1,5 @@
+127.0.0.1 - - [09/Sep/2012:23:56:35 -0300] "GET / HTTP/1.1" 404 955
+127.0.0.1 - - [09/Sep/2012:23:56:38 -0300] "GET /PedidosOnLine/index.jsp HTTP/1.1" 200 626
+127.0.0.1 - - [09/Sep/2012:23:56:47 -0300] "POST /PedidosOnLine/login.html HTTP/1.1" 200 593
+127.0.0.1 - - [09/Sep/2012:23:57:23 -0300] "GET /PedidosOnLine/index.jsp HTTP/1.1" 200 626
+127.0.0.1 - - [09/Sep/2012:23:57:40 -0300] "GET /PedidosOnLine/index.jsp HTTP/1.1" 200 626
