@@ -1,0 +1,16 @@
+!SESSION 2012-09-09 23:54:15.516 -----------------------------------------------
+eclipse.buildId=I20120608-1400
+java.version=1.7.0_06
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -data D:\Fernabel\Facu\TCS\src\dev\TCS -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.jdt.core 2 0 2012-09-09 23:55:07.822
+!MESSAGE The Java indexing could not index PedidosOnLine/WebContent/WEB-INF/lib/icu4j-2.6.1.jar|com/ibm/icu/impl/data/LocaleElements_zh__PINYIN.class. This .class file doesn't follow the class file format specification. Please report this issue against the .class file vendor
+
+!ENTRY org.eclipse.jdt.core 2 0 2012-09-09 23:56:13.087
+!MESSAGE The Java indexing could not index D:/Fernabel/Facu/TCS/src/dev/TCS/PedidosOnLine/WebContent/WEB-INF/lib/icu4j-2.6.1.jar|com/ibm/icu/impl/data/LocaleElements_zh__PINYIN.class. This .class file doesn't follow the class file format specification. Please report this issue against the .class file vendor
+
+!ENTRY org.eclipse.jdt.core 2 0 2012-09-09 23:56:19.724
+!MESSAGE The Java indexing could not index PedidosOnLine/WebContent/WEB-INF/lib/icu4j-2.6.1.jar|com/ibm/icu/impl/data/LocaleElements_zh__PINYIN.class. This .class file doesn't follow the class file format specification. Please report this issue against the .class file vendor
