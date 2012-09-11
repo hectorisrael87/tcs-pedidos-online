@@ -25,13 +25,13 @@ public class UserController {
 	private UserService userService;
 	
 	
-	@RequestMapping(value = "/add", method = RequestMethod.GET)
+	@RequestMapping(value = "/addUser", method = RequestMethod.GET)
 	public ModelAndView addArticle(@ModelAttribute("user") User user,
 			BindingResult result) {
-		return new ModelAndView("addUser");
+		return new ModelAndView("viewAddUser");
 	}
 	
-	@RequestMapping(value = "/save", method = RequestMethod.POST)
+	@RequestMapping(value = "/saveUser", method = RequestMethod.POST)
 	public ModelAndView saveArticle(@ModelAttribute(" user") User  user,
 			BindingResult result) {
 		 userService.addUser( user);
