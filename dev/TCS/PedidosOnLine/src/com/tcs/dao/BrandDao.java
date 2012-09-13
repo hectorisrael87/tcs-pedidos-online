@@ -2,7 +2,6 @@ package com.tcs.dao;
 
 import java.util.List;
 
-import com.tcs.model.Article;
 import com.tcs.model.Brand;
 
 public interface BrandDao {

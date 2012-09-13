@@ -6,7 +6,6 @@ import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import com.tcs.model.Article;
 import com.tcs.model.Order;
 import com.tcs.model.User;
 
@@ -17,8 +16,8 @@ public class OrderDaoImpl implements OrderDao{
 	@Autowired
 	private SessionFactory sessionFactory;
 	
-	public void saveOrder(Order Order) {
-		sessionFactory.getCurrentSession().saveOrUpdate(Order);
+	public void saveOrder(Order order) {
+		sessionFactory.getCurrentSession().saveOrUpdate(order);
 		
 	}
 
