@@ -2,6 +2,8 @@ package com.tcs.service;
 
 import java.util.List;
 
+import javax.annotation.Resource;
+
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -15,7 +17,7 @@ import com.tcs.model.Article;
 @Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
 public class ArticleServiceImpl implements ArticleService {
 
-	@Autowired
+	@Resource
 	private ArticleDao articleDao;
 
 	public ArticleServiceImpl() {
@@ -28,6 +30,10 @@ public class ArticleServiceImpl implements ArticleService {
 
 	public List<Article> listArticles() {
 		return articleDao.listArticles();
+	}
+	
+	public List<Article> listArticlesByBrand(int ID) {
+		return articleDao.listArticlesByBrand(ID);
 	}
 
 }
