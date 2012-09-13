@@ -13,4 +13,6 @@ public interface ArticleDao {
 	
 	
 	public List<Article> listArticles();
+	
+	public List<Article> listArticlesByBrand(int ID);
 }
