@@ -7,7 +7,6 @@ import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
@@ -45,13 +44,13 @@ public class Brand implements Serializable {
 		this.brandName = name;
 	}
 
-	/*public List<Article> getListArticulos() {
+	public List<Article> getListArticulos() {
 		return listArticulos;
 	}
 
 	public void setListArticulos(List<Article> listArticulos) {
 		this.listArticulos = listArticulos;
-	}*/
+	}
 
 	public String getBrandDesc() {
 		return brandDesc;

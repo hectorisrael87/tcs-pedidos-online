@@ -1,31 +1,24 @@
 package com.tcs.model;
 
-import java.io.Serializable;
-
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "orderDetal")
-public class OrderDetail implements Serializable {
+@Table(name = "orderDetail")
+public class OrderDetail {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue
 	@Column(name = "order_detail_id")
 	private long id;
 	
-	@Column(name = "order_detail_total")
-	private int cantidad;
-	
-	@OneToOne(cascade={CascadeType.PERSIST, CascadeType.REMOVE})
-	private Article art;
+	@Column(name = "order_detail_quantity")
+	private int quantity;
 	
 	@Column(name = "order_detail_subtotal")
 	private float subtotal;
@@ -34,25 +27,12 @@ public class OrderDetail implements Serializable {
 		
 	}
 
-	public long getId() {
-		return id;
+	public int getQuantity() {
+		return quantity;
 	}
 
-
-	public int getCantidad() {
-		return cantidad;
-	}
-
-	public void setCantidad(int cantidad) {
-		this.cantidad = cantidad;
-	}
-
-	public Article getArt() {
-		return art;
-	}
-
-	public void setArt(Article art) {
-		this.art = art;
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
 	}
 
 	public float getSubtotal() {
@@ -62,7 +42,9 @@ public class OrderDetail implements Serializable {
 	public void setSubtotal(float subtotal) {
 		this.subtotal = subtotal;
 	}
-	
-	
+
+	public long getId() {
+		return id;
+	}	
 
 }
