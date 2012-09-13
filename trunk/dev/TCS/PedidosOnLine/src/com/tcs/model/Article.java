@@ -1,11 +1,13 @@
 package com.tcs.model;
 
-import java.util.Date;
+
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -23,11 +25,12 @@ public class Article {
 	@Column(name = "article_desc", nullable = false)
 	private String articleDesc;
 	
-	@Column(name = "article_price")
-	private String articlePrice;
+	@Column(name = "article_price", nullable = false)
+	private long articlePrice;
 	
-	@Column(name = "article_brand")
-	private String articleBrand;
+	@ManyToOne 
+	@JoinColumn(name= "article_brand")
+	private Brand articleBrand;
 	
 	public Article() {		
 	}
@@ -52,20 +55,26 @@ public class Article {
 		this.articleDesc = articleDesc;
 	}
 
-	public String getArticlePrice() {
+	public long getArticlePrice() {
 		return articlePrice;
 	}
 
-	public void setArticlePrice(String articlePrice) {
+	public void setArticlePrice(long articlePrice) {
 		this.articlePrice = articlePrice;
 	}
 
-	public String getArticleBrand() {
+	public Brand getArticleBrand() {
 		return articleBrand;
 	}
 
-	public void setArticleBrand(String articleBrand) {
+	public void setArticleBrand(Brand articleBrand) {
 		this.articleBrand = articleBrand;
+	}
+	
+	@Override
+	public String toString() {
+		
+		return this.articleBrand.getBrandName();
 	}
 
 	
