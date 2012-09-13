@@ -1,18 +1,23 @@
 package com.tcs.model;
 
+
+
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+
 import javax.persistence.Table;
 
 
 @Entity
 @Table(name = "user")
-public class User {
+public  class User {
 	
 	@Id
-	@GeneratedValue
+	@GeneratedValue(strategy=GenerationType.TABLE)
 	@Column(name = "user_id")
 	private long userId;
 	
@@ -34,7 +39,11 @@ public class User {
 	@Column(name = "user_type")
 	private boolean type;
 	
-	public User (){
+	/*@OneToMany(cascade=CascadeType.ALL, fetch=FetchType.EAGER)
+	// EAGER indica que al momento de recuperar de la base de datos al pedido se trae a todas las relaciones
+	private List<Order> order = new ArrayList<Order>();*/
+
+	public User() {
 		
 	}
 
@@ -78,10 +87,6 @@ public class User {
 		this.valid = valid;
 	}
 
-	public long getUserId() {
-		return userId;
-	}
-
 	public boolean isType() {
 		return type;
 	}
@@ -90,9 +95,12 @@ public class User {
 		this.type = type;
 	}
 
-	public void setUserId(long userId) {
-		this.userId = userId;
+	public long getUserId() {
+		return userId;
 	}
+	
+	
+
 	
 	
 	
