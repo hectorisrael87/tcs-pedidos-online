@@ -71,11 +71,4 @@ public class Article {
 		this.articleBrand = articleBrand;
 	}
 	
-	@Override
-	public String toString() {
-		
-		return this.articleBrand.getBrandName();
-	}
-
-	
 }
