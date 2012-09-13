@@ -1,6 +1,7 @@
 package com.tcs.dao;
 
 
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -26,4 +27,18 @@ public class ArticleDaoImpl implements ArticleDao {
 	public List<Article> listArticles() {		
 		return (List<Article>) sessionFactory.getCurrentSession().createCriteria(Article.class).list();
 	}
+	
+	@SuppressWarnings("unchecked")
+	public List<Article> listArticlesByBrand(int ID) {	
+		//(List<Article>) sessionFactory.getCurrentSession().createCriteria("FROM Article A WHERE A.articleId =7");
+		List <Article>list =(List<Article>) sessionFactory.getCurrentSession().createCriteria(Article.class).list();
+		List <Article>subList = new ArrayList<Article>();
+		for (int i = 0; i < list.size(); i++) {
+			if( (list.get(i)).getArticleBrand().getBrandId()==ID){
+				subList.add(list.get(i));
+			}
+		}
+		return subList;
+	}
+	
 }
