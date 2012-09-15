@@ -30,10 +30,10 @@ public class BrandController {
 	public ModelAndView saveBrand(@ModelAttribute(" brand") Brand  brand,
 			BindingResult result) {
 		brandService.addBrand( brand);
-		return new ModelAndView("redirect:/brands.html");
+		return new ModelAndView("redirect:/brands/list.html");
 	}
 
-	@RequestMapping(method = RequestMethod.GET)
+	@RequestMapping(value = "/list",method = RequestMethod.GET)
 	public ModelAndView listArticles() {
 		Map<String, Object> model = new HashMap<String, Object>();
 		model.put("brands",  brandService.listBrands());
