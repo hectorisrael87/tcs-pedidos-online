@@ -1,22 +1,22 @@
 package com.tcs.model;
 
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.List;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
+import javax.persistence.DiscriminatorColumn;
+import javax.persistence.DiscriminatorType;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
+import javax.persistence.ManyToOne;
+
 
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "user")
+@Table (name = "user")
 public class User implements Serializable{
 
 	
@@ -39,13 +39,30 @@ public class User implements Serializable{
 
 	@Column(name = "user_validuser")
 	private boolean valid;
-
-	@Column(name = "user_type")
-	private boolean type;
+	
+	@ManyToOne
+	private Permission permission;
 	
 	public User() {
 
 	}
+
+	
+	
+	/*public User(long userId, String username, String password,
+			String firstName, String lastName, boolean valid,
+			Permission permission) {
+		super();
+		this.userId = userId;
+		this.username = username;
+		this.password = password;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.valid = valid;
+		this.permission = permission;
+	}*/
+
+
 
 	public String getUsername() {
 		return username;
@@ -87,16 +104,17 @@ public class User implements Serializable{
 		this.valid = valid;
 	}
 
-	public boolean isType() {
-		return type;
-	}
-
-	public void setType(boolean type) {
-		this.type = type;
-	}
-
 	public long getUserId() {
 		return userId;
 	}
 
+	public Permission getPermission() {
+		return permission;
+	}
+
+	public void setPermission(Permission permission) {
+		this.permission = permission;
+	}
+
+	
 }
