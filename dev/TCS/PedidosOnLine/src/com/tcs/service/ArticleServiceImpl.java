@@ -35,4 +35,10 @@ public class ArticleServiceImpl implements ArticleService {
 		return articleDao.listArticlesByBrand(ID);
 	}
 
+	@Override
+	public Article getArticle(int ID) {
+		
+		return articleDao.getArticle(ID);
+	}
+
 }
