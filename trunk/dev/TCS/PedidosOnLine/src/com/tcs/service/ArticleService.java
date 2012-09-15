@@ -12,4 +12,6 @@ public interface ArticleService {
 	public List<Article> listArticles();
 	
 	public List<Article> listArticlesByBrand(int ID);
+	
+	public Article getArticle (int ID);
 }
