@@ -32,3 +32,4 @@ public class BrandDaoImpl implements BrandDao {
 	}
 	
 }
+
