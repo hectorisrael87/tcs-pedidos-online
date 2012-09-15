@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import com.tcs.model.Article;
+import com.tcs.model.Requisition;
 
 @Repository("articleDao")
 public class ArticleDaoImpl implements ArticleDao {
@@ -39,6 +40,13 @@ public class ArticleDaoImpl implements ArticleDao {
 			}
 		}
 		return subList;
+	}
+
+
+	@Override
+	public Article getArticle(int ID) {
+		Article article = (Article)sessionFactory.getCurrentSession().createQuery("FROM Article A WHERE A.articleId = "+ ID +"").uniqueResult();
+		return  article ;
 	}
 	
 }
