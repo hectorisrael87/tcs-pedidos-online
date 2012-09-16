@@ -25,11 +25,4 @@ public class BrandDaoImpl implements BrandDao {
 	public List<Brand> listBrands() {		
 		return (List<Brand>) sessionFactory.getCurrentSession().createCriteria(Brand.class).list();
 	}
-	
-	public Brand getBrand(int ID) {
-		Brand brand = (Brand)sessionFactory.getCurrentSession().createQuery("FROM Brand B WHERE B.brandId = "+ ID +"").uniqueResult();
-		return  brand ;
-	}
-	
 }
-
